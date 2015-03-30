@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+        version="2.0">
+    <tlib-version>3.0</tlib-version>
+    <short-name>fn</short-name>
+    <uri>http://neusoft.com/authority/tags/customfn</uri>
+
+    <function>
+        <name>in</name>
+        <function-class>com.neusoft.authority.web.taglib.Functions</function-class>
+        <function-signature>boolean in(java.lang.Iterable,java.lang.Object)</function-signature>
+    </function>
+
+    <function>
+        <name>organizationName</name>
+        <function-class>com.neusoft.authority.web.taglib.Functions</function-class>
+        <function-signature>java.lang.String organizationName(java.lang.Long)</function-signature>
+    </function>
+
+    <function>
+        <name>organizationNames</name>
+        <function-class>com.neusoft.authority.web.taglib.Functions</function-class>
+        <function-signature>java.lang.String organizationNames(java.util.Collection)</function-signature>
+    </function>
+
+    <function>
+        <name>roleName</name>
+        <function-class>com.neusoft.authority.web.taglib.Functions</function-class>
+        <function-signature>java.lang.String roleName(java.lang.Long)</function-signature>
+    </function>
+
+    <function>
+        <name>roleNames</name>
+        <function-class>com.neusoft.authority.web.taglib.Functions</function-class>
+        <function-signature>java.lang.String roleNames(java.util.Collection)</function-signature>
+    </function>
+
+    <function>
+        <name>resourceName</name>
+        <function-class>com.neusoft.authority.web.taglib.Functions</function-class>
+        <function-signature>java.lang.String resourceName(java.lang.Long)</function-signature>
+    </function>
+
+    <function>
+        <name>resourceNames</name>
+        <function-class>com.neusoft.authority.web.taglib.Functions</function-class>
+        <function-signature>java.lang.String resourceNames(java.util.Collection)</function-signature>
+    </function>
+
+    <function>
+        <name>descendantsOfGivenResources</name>
+        <function-class>com.neusoft.authority.web.taglib.Functions</function-class>
+        <function-signature>boolean descendantsOfGivenResources(java.util.Collection,java.lang.Long)
+        </function-signature>
+    </function>
+</taglib>
