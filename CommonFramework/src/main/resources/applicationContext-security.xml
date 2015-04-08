@@ -3,4 +3,33 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+       <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+              <property name="securityManager" ref="securityManager" />
+              <property name="loginUrl" value="/login" />
+              <property name="successUrl" value="index" />
+              <property name="unauthorizedUrl" value="/common/403.jsp" />
+              <property name="filterChainDefinitionMap" ref="definitionMetaSource" />
+       </bean>
+
+       <bean id="definitionMetaSource" class="com.neusoft.framework.security.shiro.ShiroDefinitionSectionMetaSource">
+              <property name="filterChainDefinitions">
+                     <value>
+                            /login = anon
+                            /logout = logout
+                            /styles/** = anon
+                            /common/** = anon
+                            /index = authc
+                     </value>
+              </property>
+       </bean>
+
+       <bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+              <property name="realm" ref="dbRealm" />
+       </bean>
+
+       <bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor" />
+
+       <bean id="dbRealm" class="com.neusoft.framework.security.shiro.ShiroAuthorizingRealm">
+              <property name="userService" ref="userService" />
+       </bean>
 </beans>
