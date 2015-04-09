@@ -1,8 +1,7 @@
-package com.neusoft.framework.common.service;
+package com.neusoft.framework.common.tools;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.snaker.engine.access.ScriptRunner;
 import org.snaker.engine.access.jdbc.JdbcHelper;
 
 import javax.sql.DataSource;
