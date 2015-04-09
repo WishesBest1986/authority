@@ -87,7 +87,7 @@ public class UserService {
                 "left outer join sec_role_user ru on u.id = ru.user_id " +
                 "left outer join sec_role r on ru.role_id = r.id " +
                 "where u.id = ?";
-        SQLQuery query = userDao.createSQLQuery(sql);
+        SQLQuery query = userDao.createSQLQuery(sql, userId);
         return query.list();
     }
 

@@ -64,6 +64,8 @@ public class Resource extends SecurityEntity {
         this.authorities = authorities;
     }
 
+    @ManyToOne
+    @JoinColumn(name = "menu", nullable = true)
     public Menu getMenu() {
         return menu;
     }
