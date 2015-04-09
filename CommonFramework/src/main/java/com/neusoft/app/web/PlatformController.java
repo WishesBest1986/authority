@@ -13,4 +13,24 @@ public class PlatformController {
     public String index() {
         return "system/index";
     }
+
+    @RequestMapping(value = "/top", method = RequestMethod.GET)
+    public String top() {
+        return "system/top";
+    }
+
+    @RequestMapping(value = "/left", method = RequestMethod.GET)
+    public String left() {
+        return "system/left";
+    }
+
+    @RequestMapping(value = "/middle", method = RequestMethod.GET)
+    public String middle() {
+        return "system/middle";
+    }
+
+    @RequestMapping(value = "/right", method = RequestMethod.GET)
+    public String right() {
+        return "system/right";
+    }
 }
