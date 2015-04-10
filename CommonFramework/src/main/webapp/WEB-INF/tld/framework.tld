@@ -8,6 +8,35 @@
     <shortname>framework</shortname>
     <uri></uri>
 
+    <tag>
+        <name>page</name>
+        <tagclass>com.neusoft.app.web.taglibs.PageTag</tagclass>
+        <attribute>
+            <name>totalRecords</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>totalPages</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>curPage</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>exportUrl</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>lookup</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
     
     <tag>
         <name>menu</name>
